@@ -9,7 +9,11 @@ public class IntList {
 
 	/** Return the size of the list using... recursion! */
 	public int size() {
-		return 0;
+		IntList p = this;
+		if(p == null){
+			return 1;
+		}
+		return 1 + p.rest.size();
 	}
 
 	/** Return the size of the list using no recursion! */
@@ -27,6 +31,6 @@ public class IntList {
 		L = new IntList(10, L);
 		L = new IntList(5, L);
 
-		System.out.println(L.iterativeSize());
+		System.out.println(L.size());
 	}
 } 
